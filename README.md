@@ -1,70 +1,33 @@
-# Getting Started with Create React App
+# 🛒 ItuStore - Tienda de Computación (React)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+¡Bienvenido a ItuStore! Una tienda de e-commerce moderna y funcional, especializada en la venta de componentes de computación, laptops, periféricos y más.
 
-## Available Scripts
+Este proyecto fue desarrollado con **React** para ofrecer una experiencia de usuario fluida, rápida y profesional.
 
-In the project directory, you can run:
+## 🚀 Características Principales
 
-### `npm start`
+*   **Catálogo de Productos:** Visualización de productos en tarjetas interactivas con imágenes, descripciones y precios actualizados al mercado argentino.
+*   **Filtros por Categorías:** Navegación dinámica por secciones (Portátiles, Monitores, Ratones, Memorias, Almacenamiento, Auriculares) mediante rutas URL (`/categoria/:categoria`).
+*   **Carrito de Compras:** Sistema de carrito persistente (utilizando `localStorage`) que permite agregar, eliminar y modificar cantidades de productos.
+*   **Checkout por Pasos:** Flujo de compra completo que incluye:
+    1.  Formulario de datos del comprador (Nombre, Apellido, DNI, Email).
+    2.  Selección de método de envío (Retiro en tienda, Envío a domicilio, Sucursal).
+    3.  Selección de método de pago (Tarjetas, Mercado Pago) y elección de bancos con sus respectivas cuotas sin interés.
+*   **Confirmación de Compra:** Generación de un número de pedido único y resumen de la transacción.
+*   **Diseño Responsive:** Interfaz adaptable a dispositivos móviles y de escritorio, utilizando **Bootstrap 5** y CSS personalizado.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 🛠️ Tecnologías Utilizadas
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+*   **React.js** (Create React App) - Biblioteca principal para la interfaz de usuario.
+*   **React Router DOM** - Para el manejo de múltiples vistas y navegación.
+*   **Context API** - Para el manejo del estado global del carrito de compras.
+*   **Bootstrap 5 & Bootstrap Icons** - Para el diseño, grillas y componentes visuales.
+*   **LocalStorage** - Para guardar los productos del carrito incluso al recargar la página.
 
-### `npm test`
+## 💻 Instalación y Uso Local
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Si querés clonar este proyecto y correrlo en tu computadora, seguí estos pasos:
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+1. Clona el repositorio:
+   ```bash
+   git clone https://github.com/juanlevrero31/ItuStore-React.git
