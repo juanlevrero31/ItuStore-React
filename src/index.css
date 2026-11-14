@@ -1,13 +1,186 @@
+/* ===== RESET Y BASE ===== */
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    font-family: 'Inter', sans-serif;
+    background-color: #f8f9fa;
+    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* ===== HERO - PORTADA ===== */
+.hero-section {
+    background: linear-gradient(135deg, #0d0d0d 0%, #1a1a2e 100%);
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    color: #ffffff; /* Fuerza el texto a blanco */
+}
+
+/* Forzar que los textos del hero sean blancos */
+.hero-section h1, 
+.hero-section p, 
+.hero-section .lead,
+.hero-section .small,
+.hero-section .fw-bold {
+    color: #ffffff !important;
+}
+
+/* El texto azul específico de "vanguardia" */
+.hero-section h1 span {
+    color: #0d6efd !important;
+}
+
+/* Badge de oferta */
+.hero-section .badge.bg-danger {
+    background: linear-gradient(135deg, #dc3545, #ff6b6b) !important;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    box-shadow: 0 4px 15px rgba(220, 53, 69, 0.3);
+    color: #fff !important;
+}
+
+/* Botones del hero */
+.hero-section .btn-primary {
+    background: linear-gradient(135deg, #0d6efd, #0a58ca);
+    border: none;
+    padding: 12px 30px;
+    font-weight: 600;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(13, 110, 253, 0.3);
+    color: #fff !important;
+}
+
+.hero-section .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 25px rgba(13, 110, 253, 0.4);
+}
+
+.hero-section .btn-outline-light {
+    border-radius: 50px;
+    padding: 12px 30px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    color: #fff !important;
+    border-color: #fff !important;
+}
+
+.hero-section .btn-outline-light:hover {
+    transform: translateY(-2px);
+    background-color: #fff !important;
+    color: #0d6efd !important;
+}
+
+/* Stats del hero */
+.hero-section .border-top {
+    border-color: rgba(255, 255, 255, 0.15) !important;
+}
+
+/* Animación de las burbujas */
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+
+.hero-section .position-absolute .rounded-circle {
+    animation: float 3s ease-in-out infinite;
+}
+
+/* ===== TARJETAS DE PRODUCTOS ===== */
+.card {
+    border: none;
+    border-radius: 16px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+    height: 100%;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: contain;
+    background-color: #f8f9fa;
+    padding: 16px;
+}
+
+.precio {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #0d6efd;
+}
+
+/* ===== BADGES ===== */
+.card .badge {
+    font-size: 0.7rem;
+    padding: 5px 10px;
+    border-radius: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card .badge.bg-danger {
+    background: linear-gradient(135deg, #dc3545, #ff6b6b) !important;
+}
+
+.card .badge.bg-success {
+    background: linear-gradient(135deg, #198754, #2ecc71) !important;
+}
+
+.card .badge.bg-info {
+    background: linear-gradient(135deg, #0dcaf0, #6ee7ff) !important;
+    color: #000 !important;
+}
+
+/* ===== BANCOS ===== */
+.banco-card {
+    transition: all 0.3s ease !important;
+    border-radius: 12px !important;
+    overflow: hidden;
+    cursor: pointer;
+    background: white;
+    height: 100%;
+    min-height: 90px;
+    border: 2px solid #e9ecef !important;
+    position: relative;
+}
+
+.banco-card:hover {
+    transform: translateY(-4px) !important;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12) !important;
+    border-color: #0d6efd !important;
+}
+
+.banco-card.selected {
+    border-color: #0d6efd !important;
+    background: linear-gradient(135deg, #f0f7ff 0%, #e3eeff 100%) !important;
+    box-shadow: 0 4px 20px rgba(13, 110, 253, 0.25) !important;
+    transform: scale(1.02);
+}
+
+/* ===== LOGO MERCADO PAGO ===== */
+.metodo-pago-card img[alt="Mercado Pago"] {
+    max-height: 55px;
+    width: auto;
+    object-fit: contain;
+    border-radius: 10px;
+    background: white;
+    padding: 6px 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    border: 1px solid #e9ecef;
+    transition: all 0.3s ease;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    .hero-section {
+        min-height: 40vh;
+        text-align: center;
+    }
+    .hero-section h1 {
+        font-size: 2rem;
+    }
 }
